@@ -1,0 +1,55 @@
+<html>
+<head>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+</head>
+<body>
+    <header>
+        <h1>List Books</h1>
+    </header>
+</br>
+    <nav>
+        <h4>
+            <a href="/">Insert Books</a>
+            <a href="/getbooks">List Books</a>
+            <a href="/updatebook">Update Book</a>
+            <a href="/deletebook">Delete Book</a>
+            <a href="/addauthor">Insert Author</a>
+            <a href="/getauthors">List Authors</a>
+            <a href="/updateauthor">Update Author</a>
+            <a href="/deleteauthor">Delete Author</a>
+        </h4>
+    </nav>
+</br>
+    <main>
+        <table>
+            <tr>
+                <td>Title</td>
+                <td>Author</td>
+                <td>Release Date</td>
+                <td>ISBN</td>
+                <td>Summary</td>
+                <td>Delete</td>
+            </tr>
+            <% for (let i=0;i<booksDb.length;i++){ %>
+                <tr>
+                    <td><%= booksDb[i].title %> </td>
+                    <td><%= booksDb[i].author.name.firstName + " " + booksDb[i].author.name.lastName %> </td>
+                    <td><%= booksDb[i].relDate %> </td>
+                    <td><%= booksDb[i].isbn %> </td>
+                    <td><%= booksDb[i].summary %> </td>
+                    <td>
+                        <form action="/deletebookdata" method="POST">
+                            <input type ="hidden" name ="ISBN" value = <%= booksDb[i].isbn %> />
+                            <input type="submit" value="Delete?" />
+                        </form>
+                    </td>
+                </tr>
+                <%}%>
+        </table>
+    </main>
+    
+</body>
+
+</html>

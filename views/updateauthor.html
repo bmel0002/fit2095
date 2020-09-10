@@ -1,0 +1,32 @@
+<html>
+        <head>
+                <link rel="stylesheet" href="styles.css">
+        </head>
+<body>
+    <header>
+        <h1>Update Author</h1>
+    </header>
+</br>
+    <nav>
+        <h4>
+            <a href="/">Insert Books</a>
+            <a href="/getbooks">List Books</a>
+            <a href="/updatebook">Update Book</a>
+            <a href="/deletebook">Delete Book</a>
+            <a href="/addauthor">Insert Author</a>
+            <a href="/getauthors">List Authors</a>
+            <a href="/updateauthor">Update Author</a>
+            <a href="/deleteauthor">Delete Author</a>
+        </h4>
+    </nav>
+</br>
+    <main>
+        <form action="/updateauthordata" method="POST">
+            Author ID <input type="text"  name="ID" /> </br>
+            Author New Number of Books <input type="number" name="numBooks" /> </br>
+            </br>
+            <input type="submit" value="Submit" /> </br>
+        </form>
+    </main>
+</body>
+</html>

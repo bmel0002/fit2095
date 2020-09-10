@@ -1,0 +1,46 @@
+<html>
+<head>
+        <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1> Insert Author</h1>
+    </header>
+</br>
+    <nav>
+        <h4>
+            <a href="/">Insert Books</a>
+            <a href="/getbooks">List Books</a>
+            <a href="/updatebook">Update Book</a>
+            <a href="/deletebook">Delete Book</a>
+            <a href="/addauthor">Insert Author</a>
+            <a href="/getauthors">List Authors</a>
+            <a href="/updateauthor">Update Author</a>
+            <a href="/deleteauthor">Delete Author</a>
+        </h4>
+    </nav>
+</br>
+    <main>
+        <form action="/addnewauthor" method="POST">
+            First Name
+            <input type="text"  name="fname" /> </br>
+            Last Name
+            <input type="text"  name="lname" /> </br>
+            Unit
+            <input type="text"  name="unit" /> </br>
+            Street
+            <input type="text"  name="street" /> </br>
+            Suburb
+            <input type="text"  name="suburb" /> </br>
+            State
+            <input type="text"  name="state" /> </br>
+            Date of Birth
+            <input type="date"  name="dob" /> </br>
+            Number of Books
+            <input type="number"  name="numBooks" /> </br>
+            </br>
+            <input type="submit" value="Submit" /> </br>
+        </form>
+    </main>
+</body>
+</html>

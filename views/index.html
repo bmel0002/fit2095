@@ -1,0 +1,41 @@
+<html>
+<head>
+        <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="G.png" width="6.5%"/>
+        <h1>Insert Book</h1>
+    </header>
+</br>
+    <nav>
+        <h4>
+            <a href="/">Insert Books</a>
+            <a href="/getbooks">List Books</a>
+            <a href="/updatebook">Update Book</a>
+            <a href="/deletebook">Delete Book</a>
+            <a href="/addauthor">Insert Author</a>
+            <a href="/getauthors">List Authors</a>
+            <a href="/updateauthor">Update Author</a>
+            <a href="/deleteauthor">Delete Author</a>
+        </h4>
+    </nav>
+</br>
+    <main>
+        <form action="/addnewbook" method="POST">
+            Title
+            <input type="text"  name="title" /> </br>
+            Author
+            <input type="text"  name="author" /> </br>
+            ISBN
+            <input type="text"  name="ISBN" /> </br>
+            Date of Publication
+            <input type="date"  name="relDate" /> </br>
+            Summary
+            <input type="text"  name="summary" /> </br>
+            </br>
+            <input type="submit" value="Submit" /> </br>
+        </form>
+    </main>
+</body>
+</html>
