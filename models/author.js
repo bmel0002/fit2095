@@ -14,6 +14,13 @@ let authorSchema = mongoose.Schema({
         type: Date,
         get: function (newDate) {
             return moment(newDate).format('DD-MM-YYYY');
+        },
+        validate: {
+            validator: function (newDate) {
+                return moment(newDate).format('YYYY') < 2020
+                || (moment(newDate).format('YYYY') === 2020 && moment(newDate).format('MM') < 9)
+                || (moment(newDate).format('YYYY') === 2020 && moment(newDate).format('MM') === 9 && moment(newDate).format('DD') < 11);
+            }
         }
     },
     address: {
